@@ -1,0 +1,53 @@
+.filter {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__btn {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    color: $dark-500;
+    border-bottom: 3px solid rgba($color: $green-900, $alpha: 0);
+    transition: all ease 0.3s;
+
+    &:hover {
+      border-bottom: 3px solid rgba($color: $green-900, $alpha: 0.2);
+    }
+  }
+
+  
+  &__link {
+    text-transform: uppercase;
+    color: $green-900;
+    background-color: $white;
+    border-radius: 6px;
+    border: 1px solid $green-900;
+    padding: 12px 24px;
+    transition: all ease 0.3s;
+
+    &:hover {
+      background-color: $green-100;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba($color: $green-900, $alpha: 0.5);
+    }
+
+    &:active {
+      opacity: 50%;
+      box-shadow: inset 0 10px 4px 0 rgba($color: $dark-900, $alpha: 0.1);
+    }
+  }
+}
+
+

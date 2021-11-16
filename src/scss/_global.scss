@@ -1,0 +1,112 @@
+html,
+body {
+  height: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background-color: $white;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $dark-900;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+
+.container {
+  max-width: 1319px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.title {
+  font-family: 'Signika', sans-serif;
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btn {
+  background-color: $green-900;
+  color: $white;
+  padding: 12px 24px;
+  font-weight: 400;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: all ease 0.3s;
+
+  &:hover {
+    background-color: #4D800C;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba($color: $green-900, $alpha: 0.5);
+  }
+
+  &:active {
+    color: rgba($color: $white, $alpha: 0.5);
+    box-shadow: inset 0 4px 4px 0 rgba($color: $dark-900, $alpha: 0.25);
+  }
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+.hide {
+  display: none;
+}
+
+.anim {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.disappear {
+  animation-name: filter;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes filter {
+  0% {
+    visibility: visible;
+    height: 100%;
+  }
+
+  100% {
+    visibility: hidden;
+    max-width: 0;
+    height: 0;
+    margin: 0;
+    font-size: 0;
+    margin: 0;
+  }
+}

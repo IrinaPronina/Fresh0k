@@ -1,0 +1,267 @@
+.header {
+  &__top {
+    background-color: $dark-800;
+    text-transform: uppercase;
+    padding: 17px 0;
+  }
+
+  &__top-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: $white;
+    font-family: 'lato', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    transition: all ease 0.3s;
+
+    &:hover {
+      opacity: 70%;
+
+      .header__button--icon {
+        fill: rgba($color: $dark-800, $alpha: 0.7)
+      }
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    &--delivery {
+      position: relative;
+      margin-left: 43px;
+      margin-right: 82px;
+    }
+
+    &--support {
+      position: relative;
+
+      &:before {
+        content: '';
+        background-image: url(../img/support.svg);
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: -33px;
+        top: -4px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .header__link {
+        margin-right: 82px;
+        width: 100%;
+      }
+    }
+
+  }
+
+  &__top-right {
+
+    .header__item:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+
+  &__bottom {
+
+    background-color: $green-900;
+  }
+
+  &__bottom-wrapper {
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__catalog {
+    background-color: $white;
+    letter-spacing: 0.3px;
+    color: $green-900;
+    padding: 15px 40px 15px 61px;
+    border-radius: 6px;
+    position: relative;
+    transition: all ease 0.3s;
+
+    &:hover,
+    :active {
+      background-color: #E0EDCF;
+      ;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 18px;
+      display: inline-block;
+      width: 25px;
+      height: 17px;
+      background: url("../img/catalog.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:before path {
+      background-color: $green-900;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 21px;
+      right: 17px;
+      width: 8px;
+      height: 4px;
+      background: url("../img/svg/chevron-down.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__search {
+    border-radius: 6px;
+    position: relative;
+    max-width: 576px;
+    flex: 0 1 auto;
+
+
+    &--items {
+      display: flex;
+      align-items: center;
+    }
+
+    &--input {
+      font-weight: 400;
+      background-color: $white;
+      letter-spacing: 0.3px;
+      color: $dark-800;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+      padding: 15px 15px 15px 50px;
+      border: none;
+      margin: 0;
+    }
+
+    &--icon {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      width: 21px;
+      height: 20px;
+      fill: $dark-900;
+      object-fit: cover;
+      z-index: 10;
+    }
+
+    &--btn {
+      background-color: $dark-800;
+      color: $white;
+      text-transform: uppercase;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      padding: 15px 52px;
+      border: none;
+      margin: 0;
+      transition: all ease 0.3s;
+
+      &:hover {
+        background-color: rgba($color: $dark-800, $alpha: 0.85);
+      }
+
+      &:active {
+        background-color: $dark-800;
+        color: rgba($color: $white, $alpha: 0.5);
+      }
+
+      &:focus {
+        background-color: $dark-800;
+        color: $white;
+        box-shadow: 0 0 0 4px rgba($color: $white, $alpha: 0.5);
+      }
+    }
+  }
+}
+
+.header__button {}
+
+.header__button--icon {
+  position: absolute;
+  width: 32px;
+  height: 22px;
+  left: -43px;
+  top: -4px;
+}
+
+.user-nav {
+  display: flex;
+
+
+  &__item {
+    border-radius: 3px;
+    background-color: $green-900;
+    position: relative;
+    align-self: center;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background-color: rgba($color: $white, $alpha: 0.1);
+      ;
+    }
+  }
+
+  &__user {
+    position: relative;
+    padding: 9px 12.5px;
+
+    .icon-svg {
+      width: 25px;
+      height: 32px;
+      fill: $white;
+    }
+  }
+
+  &__fav {
+    position: relative;
+    padding: 9px 11px;
+
+    .icon-svg {
+      width: 32px;
+      height: 32px;
+      fill: $white;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    padding: 9px 8px 10px 10px;
+
+    .icon-svg {
+      width: 31px;
+      height: 32px;
+      fill: $white;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $white;
+    color: $red-900;
+    top: 0px;
+    left: 2px;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,145 @@
+.product {
+  max-width: 300px;
+  overflow: hidden;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  flex: 22%;
+  margin-bottom: 30px;
+  margin-right: 30px;
+
+  &:nth-child(4n+4){
+    margin-right: 0px;
+  }
+
+  &:hover {
+    border: 1px solid $green-900;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    padding: 12px;
+  }
+
+  &__fav {
+
+    &:hover {
+      svg {
+        fill: $yellow-900;
+      }
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: $silver-600;
+    transition: fill 0.3s ease;
+  }
+
+  &__badges {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__badge {
+    font-weight: 700;
+    color: $white;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    line-height: 1;
+    text-transform: uppercase;
+    border-radius: 6px;
+    margin-bottom: 4px;
+
+    &--new {
+      padding: 5px;
+      background-color: $green-900;
+    }
+
+    &--discount {
+      padding: 5px;
+      background-color: $red-900;
+    }
+
+    &--hit {
+      padding: 5px;
+      background-color: $orange-900;
+    }
+  }
+
+  &__img-box {
+    height: 215px;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__name {
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+  }
+
+  &__bottom {
+    padding: 18px;
+    height: 137px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 32px;
+  }
+
+  &__old-price {
+    font-weight: 400;
+    color: $silver-600;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 45px;
+      height: 0.63px;
+      left: -2px;
+      top: 6px;
+      background-color: $silver-600;
+      transform: rotate(-15deg);
+    }
+  }
+
+  &__new-price {
+    font-weight: 400;
+    color: $dark-500;
+  }
+
+  &__btn {
+    background-color: $green-900;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
+
+    &:hover{
+      background-color: $green-hover;
+    }
+  }
+
+  &__cart {
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    fill: $white;
+    
+  }
+}

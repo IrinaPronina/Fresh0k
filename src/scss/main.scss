@@ -1,0 +1,18 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "global";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/main-slider";
+@import "./components/advantage";
+@import "./components/top-category";
+@import "./components/footer";
+
+
+// подключения элементов
+@import "./components/filter";
+@import "./components/product";
