@@ -1,5 +1,6 @@
 .advantage {
   background-color: $silver-100;
+  padding: 49px 0;
 
   &__container {
     max-width: 840px;
@@ -9,13 +10,13 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    padding: 49px 0;
+
   }
 
   &__item {
     display: flex;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 48px;
     }
   }

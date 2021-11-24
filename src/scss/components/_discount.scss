@@ -1,0 +1,141 @@
+.discount {
+  background-color: $silver-50;
+  text-align: center;
+
+  // .discount__title
+
+  &__title {
+    margin-bottom: 60px;
+
+  }
+
+  // .discount__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 48px;
+  }
+
+  // .discount__item
+
+  &__item {
+    background-color: $white;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+
+    &:hover {
+      border: 1px solid $green-900;
+    }
+  }
+}
+
+.discount-item {
+  display: flex;
+  min-height: 124px;
+
+
+  // .discount-item__img
+
+  &__img-box {
+    width: 30%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    object-fit: cover;
+
+  }
+
+  // .discount-item__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    width: 70%;
+    text-align: left;
+    max-width: 164px;
+  }
+
+  // .discount-item__title
+
+  &__title {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-align-last: left;
+    margin-bottom: 4px;
+  }
+
+  // .discount-item__bottom
+
+  &__bottom {}
+
+  // .discount-item__subtitle
+
+  &__subtitle {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    color: $green-900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 5px;
+    text-align-last: left;
+
+    &--end {
+      color: $red-900;
+    }
+
+    &--out {
+      color: $silver-600;
+    }
+  }
+
+  // .discount-item__terms
+
+  &__terms {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  // .discount-item__price
+
+  &__price {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    line-height: 1;
+    color: $dark-500;
+  }
+
+  // .discount-item__old
+
+  &__old {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    line-height: 1;
+    color: $silver-600;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $silver-600;
+      position: absolute;
+      top: 4px;
+      left: 0px;
+      transform: rotate(-15deg);
+    }
+  }
+
+  // .discount-item__rate
+
+  &__rate {}
+}

@@ -1,0 +1,102 @@
+.banners {
+  // .banners__list
+
+  &__list {
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
+
+  // .banners__item
+
+  &__item {
+    color: $dark-500;
+    grid-column: 3 span;
+
+    &:first-child {
+      grid-column: 6 span;
+    }
+
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  &__info{
+    max-width: 390px;
+    padding: 76px 32px;
+  }
+
+  // .banners__item---left
+
+  &__item---left {
+
+    color: $white;
+    background-image: url("../img/fruits-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $silver-50;
+  }
+
+  // .banners__subtitle
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  // .banners__title
+
+  &__title {
+    font-family: 'Signika', sans-serif;
+    font-size: 30px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  // .banners__link
+
+  &__link {
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: $white;
+      bottom: -4px;
+      left: 0;
+    }
+  }
+
+  // .banners__item---middle
+
+  &__item---middle {
+    background-image: url("../img/veg-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $silver-50;
+    text-shadow: none;
+  }
+
+  // .banners__item---right
+
+  &__item---right {
+    background-image: url("../img/bread-3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $silver-50;
+    text-shadow: none;
+  }
+}
